@@ -1,0 +1,38 @@
+create database impactafy;
+go
+
+use impactafy;
+go 
+
+create table usuario(
+email varchar (100) not null,
+nick varchar (100),
+constraint pkUsuario primary key (email)
+constraint uqNick UNIQUE (nick)/*não deixa repetir nick*/
+
+);
+
+create table musica(
+id int identity (10, 5) not null,
+nome varchar (50) not null,
+data date not null,
+constraint pkMusica primary key (id)
+
+);
+
+create table compra (
+emailUsuario varchar (100) not null,
+idMusica int not null,
+data date not null,
+constraint fkCompraUsuario FOREIGN key (emailUsuario) references usuario(email), /*definir chave estrangeira*/
+constraint fkCompraMusica foreign key (idMusica) references musica (id),
+constraint pkCompra primary key (emailUsuario, idMusica),
+
+);
+
+
+
+
+
+
+Made By: Kaio :3
