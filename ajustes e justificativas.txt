@@ -1,0 +1,4 @@
+CPf,RG: não pode ser nulo, porque é um documento de identificação do cliente.
+uf: não pode ser nulo, pois o mesmo número de RG pode ser encontrado em vários estados.
+nome: não pode ser nulo, pois é uma forma direta de identificar o cliente.
+cnh: não pode ser nulo,pois sem esse documento não podemos ter certeza de que a pessoa está apta para dirigir um veículo motorizado.
